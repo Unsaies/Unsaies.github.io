@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>搜索</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Helvetica Neue', sans-serif;
+			background: #f6f6f6;
+		}
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.search-box {
+			background: #fff;
+			border-radius: 20px;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+		.search-box input[type="text"] {
+			flex: 1;
+			margin-left: 10px;
+			border: none;
+			outline: none;
+			font-size: 16px;
+		}
+		.search-btn {
+			background: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			cursor: pointer;
+			margin-left: 10px;
+			font-size: 16px;
+		}
+		.search-btn:hover {
+			background: #0069d9;
+		}
+		.search-engine {
+			display: flex;
+			align-items: center;
+			margin-top: 10px;
+		}
+		.search-engine label {
+			margin-right: 10px;
+			font-size: 14px;
+		}
+		.search-engine input[type="radio"] {
+			margin-right: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form id="search-form">
+			<div class="search-box">
+				<input type="text" name="q" placeholder="在这里搜索...">
+				<button class="search-btn" type="submit">搜索</button>
+			</div>
+			<div class="search-engine">
+				<label>搜索引擎:</label>
+				<input type="radio" name="engine" value="google" checked><label>Google</label>
+				<input type="radio" name="engine" value="baidu"><label>百度</label>
+				<input type="radio" name="engine" value="bing"><label>Bing</label>
+			</div>
+		</form>
+	</div>
+	<script>
+		const form = document.getElementById('search-form');
+		form.addEventListener('submit', function(event) {
+			event.preventDefault(); // 阻止表单提交
+			const q = form.elements.q.value; // 获取搜索关键词
+			const engine = form.elements.engine.value; // 获取搜索引擎
+			let url = ''; // 定义搜索URL
+			switch (engine) {
+				case 'google':
+					url = 'https://www.google.com/search?q=' + encodeURIComponent(q);
+					break;
+				case 'baidu':
+					url = 'https://www.baidu.com/s?wd=' + encodeURIComponent(q);
+					break;
+				case 'bing':
+					url = 'https://www.bing.com/search?q=' + encodeURIComponent(q);
+					break;
+			}
+			if (url !== '') {
+				window.location.href = url; // 跳转到搜索页面
+			}
+		});
+	</script>
+</body>
+</html>
