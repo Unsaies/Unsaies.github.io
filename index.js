@@ -36,8 +36,8 @@ function get_web_list(){
     })
     .catch((meg)=>{
       console.error(meg);
-      console.log("重新请求数据中......");
-      get_web_list();
+      console.log("数据请求失败，请刷新页面。");
+      // get_web_list();
     });
 }
 get_web_list();
