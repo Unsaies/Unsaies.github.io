@@ -5,9 +5,16 @@ const searchbtns = document.getElementsByTagName("button")[0];
 // 获取选中的搜索引擎
 const selectengine = document.getElementsByTagName('select')[0];
 // 搜索
-searchbtns.addEventListener('click', function(){
+searchquestion.addEventListener("keypress", function(event){
+  if(event.key === "Enter"){
+    search();
+  } 
+});
+// 为搜索按钮添加点击事件，此处用search而不用search()，不然会直接执行search()
+searchbtns.addEventListener('click', search);
+function search(){
   window.open(selectengine.value + searchquestion.value, "_self");
-})
+}
 
 // 获取websites.txt文件的数据
 function get_web_list(){
