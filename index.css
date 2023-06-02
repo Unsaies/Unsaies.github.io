@@ -1,0 +1,88 @@
+:root {
+	--c0: #fff;
+	--c1: #baccd9;
+	--c2: #519ac3;
+	--c3: #495c69;
+	--c4: #8fb2c9;
+	--c5: #5698c3;
+	--c6: #11659a;
+	--c7: #1772b4;
+	/* 搜索边框样式	*/
+	--search-b: 2px solid #fff;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	background-color: var(--c7);
+}
+.container {
+	width: 88%;
+	margin-left: 6%;
+}
+
+/* 搜索 */
+.search-engine {
+	padding: 40px 20px;
+}
+.search-box {
+	display: flex;
+	width: 50%;
+	margin-left: 25%;
+	border: 0px;
+}
+.search-box * {
+	margin: 0px;
+	padding: 0px;
+	height: 38px;
+	box-sizing: border-box;
+	outline: none;
+	border: 0px;
+	color: var(--c1);
+}
+.search-box > input,
+.search-box > select {
+	background-color: var(--c3);
+}
+.search-box > select,
+.search-box > button {
+	margin-left: auto;
+	text-align: center;
+}
+.search-box > input {
+	flex-grow: 1;
+	padding: 0px 10px;
+}
+.search-box > select {
+	width: 18px;
+}
+.search-box > button {
+	width: 100px;
+	background-color: var(--c3);
+}
+
+/* 常用网址 */
+.used-websites a {
+	display: inline-block;
+	box-sizing: border-box;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	text-decoration: none;
+	color: var(--c1);
+	background-color: var(--c6);
+
+	border-radius: 6px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 0px 10px;
+}
+
+.used-websites a:link,
+.used-websites a:visited {
+	color: var(--c1);
+	background-color: var(--c6);
+	text-decoration: none;
+}
