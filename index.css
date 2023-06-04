@@ -30,7 +30,7 @@ body {
 .search-box {
 	display: flex;
 	width: 50%;
-	margin-left: 25%;
+/*	margin-left: 25%;*/
 	border: 0px;
 }
 .search-box * {
