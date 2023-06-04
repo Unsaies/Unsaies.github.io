@@ -60,6 +60,7 @@ body {
 }
 .search-box > button {
 	width: 100px;
+	min-width: 98px;
 	background-color: var(--c3);
 }
 

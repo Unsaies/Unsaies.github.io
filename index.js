@@ -32,11 +32,13 @@ function get_web_list(){
         return { name, url };
       });
       // 请求成功后运行
-      show_website(website_list);
+      console.log(website_list);
+      website_list.length <= 1 ? show_website(web_arr) : show_website(website_list);
     })
     .catch((meg)=>{
       console.error(meg);
       console.log("数据请求失败，请刷新页面。");
+      show_website(web_arr);
       // get_web_list();
     });
 }
@@ -57,3 +59,40 @@ function show_website(websdata) {
   }
 }
 
+// 网页数据
+var web_arr = [
+  {
+    name:"百度",
+    url:"https://www.baidu.com"
+  },
+  {
+    name:"Bing",
+    url:"https://cn.bing.com"
+  },
+  {
+    name:"哔哩哔哩",
+    url:"https://www.bilibili.com"
+  },
+  {
+    name:"Github",
+    url:"https://github.com"
+  },
+  {
+    name:"草料二维码",
+    url:"https://cli.im"
+  },
+  {
+    name:"微信公众号",
+    url:"https://mp.weixin.qq.com"
+  },
+  {
+    name:"抖音",
+    url:"https://www.douyin.com/"
+  },
+  {
+    name:"QQ邮箱",
+    url:"https://mail.qq.com/"
+  }
+]
+
+console.log(web_arr);
