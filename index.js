@@ -63,6 +63,10 @@ function show_website(websdata) {
 // 网页数据
 var web_arr = [
   {
+    name:"note",
+    url:"https://3l642f1923.zicp.fun"
+  }，
+  {
     name:"百度",
     url:"https://www.baidu.com"
   },
@@ -93,6 +97,10 @@ var web_arr = [
   {
     name:"QQ邮箱",
     url:"https://mail.qq.com/"
+  },
+  {
+    name:"菜鸟教程",
+    url:"https://www.runoob.com/"
   }
 ]
 
