@@ -65,7 +65,7 @@ var web_arr = [
   {
     name:"note",
     url:"https://3l642f1923.zicp.fun"
-  }，
+  },
   {
     name:"百度",
     url:"https://www.baidu.com"
